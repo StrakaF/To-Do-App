@@ -1,3 +1,5 @@
-const inputField = document.getElementById("inputField");
-const buttonToAdd = document.getElementById("addToDo");
-const list = document.getElementsByClassName("to-do");
+const formEl = document.querySelector(".form");
+
+const inputEl = document.querySelector(".input");
+
+const ulEl = document.querySelector(".list");
