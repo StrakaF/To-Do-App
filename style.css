@@ -1,6 +1,16 @@
-* {
+body  {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    background: #FFF7F1
 }
 
+.form {
+    margin-top: 10rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    width: 25rem;
+    background: #F2EFE5;
+    border-radius: .625rem;
+}
