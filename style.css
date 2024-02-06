@@ -1,3 +1,4 @@
+
 body  {
     padding: 0;
     margin: 0;
@@ -13,4 +14,18 @@ body  {
     width: 25rem;
     background: #F2EFE5;
     border-radius: .625rem;
+}
+
+.input {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 10px;
+    border-radius: .625rem .625rem 0 0;
+    border: none;
+    font-size: 20px;
+}
+
+.input::placeholder {
+    color:#C7C8CC;
 }
