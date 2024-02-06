@@ -1,13 +1,17 @@
-
-body  {
+/* General and Body style */
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+body  {
     display: flex;
     justify-content: center;
     background: #FFF7F1
 }
 
+/* Form style */
 .form {
     margin-top: 10rem;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
@@ -16,6 +20,7 @@ body  {
     border-radius: .625rem;
 }
 
+/* Input and placeholder style */
 .input {
     width: 100%;
     box-sizing: border-box;
@@ -28,4 +33,38 @@ body  {
 
 .input::placeholder {
     color:#C7C8CC;
+}
+
+/* Unordered list style */
+.list li {
+    list-style-type: none;
+    padding: .9375rem;
+    border-top: 1px solid #C7C8CC;
+    position: relative;
+}
+
+/* Icons style */
+.list li .fa-trash {
+    color: #EF4040;
+    position: absolute;
+    right: .625rem;
+    cursor: pointer;
+
+}
+
+.list li .fa-check-square{
+    color: #65B741;
+    position: absolute;
+    right: 2.5rem;
+    cursor: pointer;
+}
+
+/* Checked item style */
+.list li.checked {
+    text-decoration: line-through;
+    color: #C7C8CC;
+}
+
+.list li.checked .fa-check-square{
+    color: #C7C8CC;
 }
