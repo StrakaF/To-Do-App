@@ -16,7 +16,8 @@ function toDoList () {
     const liEl = document.createElement("li"); // created li element
     liEl.innerText = newTask; //stored input value inside created li element
     ulEl.appendChild(liEl); //appended completed li element
-    inputEl.value =" "; //empty input after submit
+    inputEl.value = ""; //empty input after submit
+    inputEl.placeholder = "Enter your task";
 
     //Check button
     const checkBtnEl = document.createElement("div"); //created new div element
@@ -28,11 +29,17 @@ function toDoList () {
     trashBtnEl.innerHTML = `<i class="fas fa-trash">`;
     liEl.appendChild(trashBtnEl);
 
+    //Checked function
     checkBtnEl.addEventListener("click", function() {
         if ( !liEl.classList.contains("checked")) {
             liEl.classList.add("checked")
         } else {
             liEl.classList.remove("checked");
         }
+    });
+
+    //Removing function
+    trashBtnEl.addEventListener("click", function() {
+        liEl.remove();
     });
 }
