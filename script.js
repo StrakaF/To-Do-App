@@ -28,5 +28,11 @@ function toDoList () {
     trashBtnEl.innerHTML = `<i class="fas fa-trash">`;
     liEl.appendChild(trashBtnEl);
 
-    
+    checkBtnEl.addEventListener("click", function() {
+        if ( !liEl.classList.contains("checked")) {
+            liEl.classList.add("checked")
+        } else {
+            liEl.classList.remove("checked");
+        }
+    });
 }
