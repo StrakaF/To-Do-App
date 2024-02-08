@@ -36,10 +36,25 @@ function toDoList () {
         } else {
             liEl.classList.remove("checked");
         }
+        updateLocalStorage();
     });
 
     //Removing function
     trashBtnEl.addEventListener("click", function() {
         liEl.remove();
+        updateLocalStorage();
     });
+    updateLocalStorage();
+}
+
+function updateLocalStorage () {
+    const liEls = document.querySelectorAll("li"); //check all li elements and store in var
+    let list = []; //var for li
+    liEls.forEach( liEl => { //function triggered once for each element
+        list.push({
+            name: liEl.innerText, //name of task
+            checked: liEl.classList.contains("checked") //true or false
+        })
+    });
+    localStorage.setItem("list", JSON.stringify(list)); //setting list, converting to string
 }
