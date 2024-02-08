@@ -4,6 +4,12 @@ const formEl = document.querySelector(".form");
 const inputEl = document.querySelector(".input");
 const ulEl = document.querySelector(".list");
 
+let list = JSON.parse(localStorage.getItem("list"));
+
+list.forEach(task => {
+    toDoList(task);
+})
+
 /* Prevented event and called toDoList */ 
 formEl.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -11,9 +17,15 @@ formEl.addEventListener("submit", (event) => {
 });
 
 /* toDoList */
-function toDoList () {
+function toDoList (task) {
     let newTask = inputEl.value; //stored input value
+    if(task) {
+        newTask = task.name;
+    }
     const liEl = document.createElement("li"); // created li element
+    if(task &&  task.checked){
+        liEl.classList.add("checked");
+    }
     liEl.innerText = newTask; //stored input value inside created li element
     ulEl.appendChild(liEl); //appended completed li element
     inputEl.value = ""; //empty input after submit
@@ -49,7 +61,7 @@ function toDoList () {
 
 function updateLocalStorage () {
     const liEls = document.querySelectorAll("li"); //check all li elements and store in var
-    let list = []; //var for li
+    list = []; //var for li
     liEls.forEach( liEl => { //function triggered once for each element
         list.push({
             name: liEl.innerText, //name of task
