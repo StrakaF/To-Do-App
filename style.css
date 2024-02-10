@@ -8,7 +8,9 @@
 body  {
     display: flex;
     justify-content: center;
-    background: #FFF7F1
+    background: #FFF7F1;
+    font-family: 'DM Sans', sans-serif;
+    
 }
 
 /* Form style */
@@ -29,6 +31,7 @@ body  {
     border-radius: .625rem .625rem 0 0;
     border: none;
     font-size: 20px;
+    font-weight: 100;
 }
 
 .input::placeholder {
@@ -72,4 +75,29 @@ body  {
 .list li.checked .fa-check-square{
     color: #C7C8CC;
 }
+
+h1 {
+    position: absolute;
+    font-size: 80px;
+    left: -10px;
+    top: -30px;
+    color: #C7C8CC;
+    z-index: -11111;
+
+}
+
+h2 {
+    position: absolute;
+    font-size: 80px;
+    right: 0px;
+    bottom: 0px;
+    color: #C7C8CC;
+    z-index: -111111;
+}
+
+@media only screen and (max-width: 951px) {
+    h1 {
+        font-size: 70px;
+    }
+  }
 
